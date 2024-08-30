@@ -1,0 +1,14 @@
+Juan,Perez,2021001
+Examen,85.0,Examen Bimestre 1
+Examen,90.0,Examen Bimestre 2
+----
+Maria,Lopez,2021002
+Examen,75.0,Examen Bimestre 1
+Examen,80.0,Examen Bimestre 2
+----
+Jonathan,Martinez,2021003
+Examen,50.0,Examen Bimestre 1
+Examen,40.0,Examen Bimestre 2
+Examen,40.0,Examen Bimestre 3
+Examen,60.0,Examen Bimestre 4
+----
