@@ -110,7 +110,7 @@ Ingrese el nombre y el apellido del nuevo alumno, el programa le hara automatica
   ## 8. Contacto
   
    - Jonathan Martinez
-  jistupem1@miumg.edu.gt
+   - jistupem1@miumg.edu.gt
 
    - Alex Alvarado
    - jalvaradom20@miumg.edu.gt
