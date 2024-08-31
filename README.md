@@ -75,18 +75,25 @@ El  usuario podrá ingresar al sistema con las credenciales otorgadas.
 Donde debe escribir su "Nombre"  en la opción de  "nombre"
  La contraseña anteriormente otorgada en la opción "Contraseña" defaul 123
 
-  - ![bienvenido](Assets/login.jpeg)
+  - ![login](Assets/login.jpeg)
 
  si el inicio de secion es correcto tendra que mostras esta pantalla
  
- - ![bienvenido](Assets/login true.jpeg)
+ - ![login true](Assets/logintrue.jpeg)
 
  - si usted ingresa erronaemente las credenciales les aparecera esta pantalla
 Sistema de notas
 
-5.4 El usuario podrá registrar un nuevo alumno en al sección "registrar Alumno"
+- ![login false](Assets/loginerror.jpeg)
+
+6.2 El usuario podrá registrar un nuevo alumno en al sección "registrar Alumno"
 Ingrese el nombre y el apellido del nuevo alumno, el programa le hara automaticamente un carnet al alumno
 
+- ![Alumnos](Assets/alumnos.jpeg)
+
+ - 6.3 para ingresar la nota del alumno  
+
+  
 
 
 
