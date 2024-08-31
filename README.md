@@ -26,6 +26,8 @@ un estudiante aprueba o no el año escolar.
 ## 4.  Estructura del Proyecto
 * El proyecto se organiza en las siguientes clases y paquetes:
 
+  - ![login](Assets/login.jpeg)
+
 - Paquete  Principal  
  Estudiante.java: Clase que representa a un alumno con sus datos personales (Nombre, Apellido, Carnet)
  
