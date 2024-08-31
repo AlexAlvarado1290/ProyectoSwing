@@ -4,7 +4,7 @@
 La aplicación tiene como objetivo gestionar el control de notas de estudiantes de un grado de primaria.
 El sistema permitirá el registro de notas por bimestre, el cálculo de promedios y la determinación de si
 un estudiante aprueba o no el año escolar. 
-Opcionalmente, el proyecto puede extenderse para manejar múltiples grados. 
+
 ---
 
 ##  2. Características principales:
@@ -18,7 +18,6 @@ Opcionalmente, el proyecto puede extenderse para manejar múltiples grados.
 ## 3. Requisitos del Sistema
 
  - Lenguaje de Programación: Java 8 o superior
- - Entorno de Desarrollo: Cualquier IDE compatible con Java (Eclipse, IntelliJ IDEA, NetBeans).
  - Dependencias Externas: Ninguna (proyecto independiente).
  - Windows 10 desde la versión Java 8
  
@@ -32,7 +31,7 @@ Opcionalmente, el proyecto puede extenderse para manejar múltiples grados.
  
 - Examen.java:Clase que representa la cantidad de puntos que optivo el alumno en la prueba (examen)
 
- - Materia.java: representa las diferentes materias que impartiran diferentes o el mismo catedratico (maestro)
+- Materia.java: representa las diferentes materias que impartiran diferentes o el mismo catedratico (maestro)
  
 - Nota.java: representa la cantidad de puntos que optivo el alumno en las tareas.
 
@@ -44,6 +43,7 @@ Opcionalmente, el proyecto puede extenderse para manejar múltiples grados.
 
 
     Paquete ui (Interfaz de Usuario)
+  
  -  AgregarAlumnos.java: representa la interface para agregar nuevos alumnos 
 
 - Login.java: representa cuando el usuario ingresara sus credenciales para poder ingresar al sistema
@@ -52,14 +52,13 @@ Opcionalmente, el proyecto puede extenderse para manejar múltiples grados.
 
 
 ## 5. Funciones y Flujos del Sistema
+
 - Login
 Permite incresar las credenciales, que anteriormente el personal capacitado te brindo.
 ingresa tu primer nombre y apellido e ingresa la contraseña designada por el personal capacitado.
-  - ![bienvenido](Assets/bienvenido.jpg)
 
 - Agregar Alumno
  Permite registrar un nuevo alumno en un grado específico. Se solicitan datos básicos como nombre, apellidos, y asignación al grado.
- - ![bienvenido](foto.jpg)
 
 - Ingreso de Notas por Bimestre
 El sistema permite ingresar notas para cada uno de los cuatro bimestres, asegurándose de que cada nota esté en el rango de 0 a 100.
@@ -73,11 +72,23 @@ el promedio final de un alumno es igual o mayor a 60 puntos, el alumno aprueba e
 ## 6. Casos de Uso
 - 6.1 login de usuario
 El  usuario podrá ingresar al sistema con las credenciales otorgadas. 
-Donde debe escribir su  "nombre"  en la opción de "Nombre y apellido".
- La contraseña en la opción "Contraseña" 
+Donde debe escribir su "Nombre"  en la opción de  "nombre"
+ La contraseña anteriormente otorgada en la opción "Contraseña" defaul 123
+
+  - ![bienvenido](Assets/login.jpeg)
+
+
 
 Sistema de notas
-5.2 El usuario encontrara la opcion de cambiar de sección en la opcion "sección" 
-5.3 El usuario podrá cambiar de materia en la opción  de  en la opción "materia" 
+
 5.4 El usuario podrá registrar un nuevo alumno en al sección "registrar Alumno"
-6. Casos de Uso
+Ingrese el nombre y el apellido del nuevo alumno, el programa le hara automaticamente un carnet al alumno
+
+
+
+
+
+- ![bienvenido](Assets/agregar estudiantes.jpg)
+
+
+
