@@ -106,7 +106,6 @@ Ingrese el nombre y el apellido del nuevo alumno, el programa le hara automatica
 
 
 
-- ![bienvenido](Assets/agregar estudiantes.jpg)
 
 
 
