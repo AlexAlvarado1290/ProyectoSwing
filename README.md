@@ -101,8 +101,23 @@ Ingrese el nombre y el apellido del nuevo alumno, el programa le hara automatica
    podra seleccionar al alumno por carnet y al terminar seleccione el boton agregar
    
  - ![Alumnos](Assets/notas.jpeg)
-  
 
+ ## 7. Posibles Mejoras
+ 
+ - Reportes de notas y promedios exportables a formatos como PDF o Excel.
+ - Sistema de autenticación para diferentes usuarios (profesores, administradores).
+
+  ## 8. Contacto
+  
+   - Jonathan Martinez
+  jistupem1@miumg.edu.gt
+
+   - Alex Alvarado
+   - jalvaradom20@miumg.edu.gt
+
+   - Mariela Aguilar
+   - lixcoya1@miumg.edu.gt
+  
 
 
 
