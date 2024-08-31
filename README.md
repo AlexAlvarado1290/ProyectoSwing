@@ -55,7 +55,7 @@ Opcionalmente, el proyecto puede extenderse para manejar múltiples grados.
 - Login
 Permite incresar las credenciales, que anteriormente el personal capacitado te brindo.
 ingresa tu primer nombre y apellido e ingresa la contraseña designada por el personal capacitado.
-
+  - ![bienvenido](Assets/bienvenido.jpg)
 
 - Agregar Alumno
  Permite registrar un nuevo alumno en un grado específico. Se solicitan datos básicos como nombre, apellidos, y asignación al grado.
