@@ -10,8 +10,7 @@ import java.io.Serializable;
  *
  * @author Alex Alvarado
  */
-public abstract class Nota implements Serializable {
-    private static final long serialVersionUID = 1L;
+public abstract class Nota {
     protected double valor;
     protected String descripcion;
 

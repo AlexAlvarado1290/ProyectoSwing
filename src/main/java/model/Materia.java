@@ -7,10 +7,6 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Alex Alvarado
- */
 public class Materia {
     private String nombre;
     private List<Estudiante> estudiantes;

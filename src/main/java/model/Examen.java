@@ -4,10 +4,6 @@
  */
 package model;
 
-/**
- *
- * @author Alex Alvarado
- */
 public class Examen extends Nota {
     public Examen(double valor, String descripcion) {
         super(valor, descripcion);

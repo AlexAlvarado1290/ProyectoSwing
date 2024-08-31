@@ -8,10 +8,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Alex Alvarado
- */
 public class Estudiante extends Persona implements Serializable{
     private static final long serialVersionUID = 1L;
     private String carnet;
@@ -25,7 +21,7 @@ public class Estudiante extends Persona implements Serializable{
     }
     
     /**
-     *Es un constructor
+     *Cargamos el constructor
      */
     public Estudiante(){
         super();

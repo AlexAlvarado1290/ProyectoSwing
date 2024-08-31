@@ -16,10 +16,7 @@ import javax.swing.JOptionPane;
 import model.Estudiante;
 import model.Examen;
 import model.Nota;
-/**
- *
- * @author Alex Alvarado
- */
+
 public class Login extends javax.swing.JFrame {
 
     /**
@@ -28,13 +25,11 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         agregarPlaceholders();
-//        crearArchivoEstudiantes();
         setLocationRelativeTo(null);
         jButton1.requestFocusInWindow();
     }
     
     private void agregarPlaceholders() {
-        // Placeholder para el JTextField (Usuario)
         jTextField.setText("Profesor");
         jTextField.addFocusListener(new FocusAdapter() {
             @Override
@@ -52,15 +47,14 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        // Placeholder para el JPasswordField (Contraseña)
         jPasswordField.setText("Contraseña");
-        jPasswordField.setEchoChar((char) 0); // Mostrar texto en JPasswordField
+        jPasswordField.setEchoChar((char) 0);
         jPasswordField.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
                 if (String.valueOf(jPasswordField.getPassword()).equals("Contraseña")) {
                     jPasswordField.setText("");
-                    jPasswordField.setEchoChar('•'); // Restaurar el caracter de eco
+                    jPasswordField.setEchoChar('•');
                 }
             }
 
@@ -68,7 +62,7 @@ public class Login extends javax.swing.JFrame {
             public void focusLost(FocusEvent e) {
                 if (String.valueOf(jPasswordField.getPassword()).isEmpty()) {
                     jPasswordField.setText("Contraseña");
-                    jPasswordField.setEchoChar((char) 0); // Mostrar texto en JPasswordField
+                    jPasswordField.setEchoChar((char) 0);
                 }
             }
         });
@@ -76,10 +70,9 @@ public class Login extends javax.swing.JFrame {
     
     private void crearArchivoEstudiantes() {
         List<Estudiante> estudiantes = new ArrayList<>();
-        estudiantes.add(new Estudiante("Juan", "Perez", "2021001"));
-        estudiantes.add(new Estudiante("Maria", "Lopez", "2021002"));
+        estudiantes.add(new Estudiante("Juan", "Perez", "2024001"));
+        estudiantes.add(new Estudiante("Maria", "Lopez", "2024002"));
 
-        // Agregar algunas notas para los estudiantes
         estudiantes.get(0).agregarNota(new Examen(85, "Examen Bimestre 1"));
         estudiantes.get(0).agregarNota(new Examen(90, "Examen Bimestre 2"));
         estudiantes.get(1).agregarNota(new Examen(75, "Examen Bimestre 1"));
@@ -91,7 +84,7 @@ public class Login extends javax.swing.JFrame {
                 for (Nota nota : estudiante.getNotas()) {
                     writer.write(nota.getTipo() + "," + nota.getValor() + "," + nota.getDescripcion() + "\n");
                 }
-                writer.write("----\n"); // Separador para cada estudiante
+                writer.write("----\n");
             }
             System.out.println("Archivo estudiantes.txt creado correctamente.");
         } catch (IOException e) {
@@ -181,7 +174,6 @@ public class Login extends javax.swing.JFrame {
 
         if (autenticar(usuario, contraseña)) {
             JOptionPane.showMessageDialog(this, "Login exitoso");
-            // Aquí abrirías la ventana principal del sistema de notas
             abrirVentanaPrincipal();
         } else {
             JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
@@ -190,16 +182,13 @@ public class Login extends javax.swing.JFrame {
 
 
     private boolean autenticar(String usuario, String contraseña) {
-        // Aquí puedes hacer la autenticación desde un archivo o una lista en memoria.
-        // Ejemplo simple con usuario y contraseña fijos:
-        return usuario.equals("a") && contraseña.equals("12");
+        return usuario.equals("Melvin") && contraseña.equals("123");
     }
 
     private void abrirVentanaPrincipal() {
-        // Crear y mostrar la ventana principal del sistema de notas
-        Main_Window ventanaPrincipal = new Main_Window(); // Reemplaza con tu ventana principal
+        Main_Window ventanaPrincipal = new Main_Window();
         ventanaPrincipal.setVisible(true);
-        dispose(); // Cerrar la ventana de login
+        dispose();
     }
     
     /**
