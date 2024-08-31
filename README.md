@@ -79,7 +79,7 @@ Donde debe escribir su "Nombre"  en la opción de  "nombre"
 
  si el inicio de secion es correcto tendra que mostras esta pantalla
  
- - ![bienvenido](Assets/logintrue.jpeg)
+ - ![bienvenido](Assets/login true.jpeg)
 
  - si usted ingresa erronaemente las credenciales les aparecera esta pantalla
 Sistema de notas
