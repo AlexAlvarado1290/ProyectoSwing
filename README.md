@@ -81,6 +81,10 @@ Donde debe escribir su "Nombre"  en la opción de  "nombre"
  
  - ![login true](Assets/logintrue.jpeg)
 
+   seguidamente le mostrara el siguente formulario
+   
+  - ![login true](Assets/gg.jpeg)
+
  - si usted ingresa erronaemente las credenciales les aparecera esta pantalla
 Sistema de notas
 
@@ -91,8 +95,12 @@ Ingrese el nombre y el apellido del nuevo alumno, el programa le hara automatica
 
 - ![Alumnos](Assets/alumnos.jpeg)
 
- - 6.3 para ingresar la nota del alumno  
+ - 6.3 para ingresar la nota del alumno
 
+   seleccione el boton "Agregar notas", seguidamente se le desplegara una pantalla para poder agregar las notas
+   podra seleccionar al alumno por carnet y al terminar seleccione el boton agregar
+   
+ - ![Alumnos](Assets/notas.jpeg)
   
 
 
