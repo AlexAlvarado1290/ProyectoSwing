@@ -77,8 +77,11 @@ Donde debe escribir su "Nombre"  en la opción de  "nombre"
 
   - ![bienvenido](Assets/login.jpeg)
 
+ si el inicio de secion es correcto tendra que mostras esta pantalla
+ 
+ - ![bienvenido](Assets/logintrue.jpeg)
 
-
+ - si usted ingresa erronaemente las credenciales les aparecera esta pantalla
 Sistema de notas
 
 5.4 El usuario podrá registrar un nuevo alumno en al sección "registrar Alumno"
