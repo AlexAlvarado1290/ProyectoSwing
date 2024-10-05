@@ -16,6 +16,7 @@ import javax.swing.JOptionPane;
 import model.Estudiante;
 import model.Examen;
 import model.Nota;
+import static utils.DatabaseConnection.eliminarEstudiantePorCarnet;
 
 public class Login extends javax.swing.JFrame {
 
@@ -27,6 +28,7 @@ public class Login extends javax.swing.JFrame {
         agregarPlaceholders();
         setLocationRelativeTo(null);
         jButton1.requestFocusInWindow();
+        eliminarEstudiantePorCarnet("2024005");
     }
     
     private void agregarPlaceholders() {
@@ -68,30 +70,6 @@ public class Login extends javax.swing.JFrame {
         });
     }
     
-    private void crearArchivoEstudiantes() {
-        List<Estudiante> estudiantes = new ArrayList<>();
-        estudiantes.add(new Estudiante("Juan", "Perez", "2024001"));
-        estudiantes.add(new Estudiante("Maria", "Lopez", "2024002"));
-
-        estudiantes.get(0).agregarNota(new Examen(85, "Examen Bimestre 1"));
-        estudiantes.get(0).agregarNota(new Examen(90, "Examen Bimestre 2"));
-        estudiantes.get(1).agregarNota(new Examen(75, "Examen Bimestre 1"));
-        estudiantes.get(1).agregarNota(new Examen(80, "Examen Bimestre 2"));
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\Alex Alvarado\\Documents\\NetBeansProjects\\ProyectoSwing\\src\\main\\java\\files\\estudiantes.txt"))) {
-            for (Estudiante estudiante : estudiantes) {
-                writer.write(estudiante.getNombre() + "," + estudiante.getApellido() + "," + estudiante.getCarnet() + "\n");
-                for (Nota nota : estudiante.getNotas()) {
-                    writer.write(nota.getTipo() + "," + nota.getValor() + "," + nota.getDescripcion() + "\n");
-                }
-                writer.write("----\n");
-            }
-            System.out.println("Archivo estudiantes.txt creado correctamente.");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -182,7 +160,7 @@ public class Login extends javax.swing.JFrame {
 
 
     private boolean autenticar(String usuario, String contraseña) {
-        return usuario.equals("Melvin") && contraseña.equals("123");
+       return usuario.equals("Melvin") && contraseña.equals("123");
     }
 
     private void abrirVentanaPrincipal() {

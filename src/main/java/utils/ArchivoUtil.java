@@ -48,7 +48,7 @@ public class ArchivoUtil {
 
     }
     
-    public static List<Estudiante> cargarEstudiantesDesdeArchivo(String rutaArchivo) {
+   public static List<Estudiante> cargarEstudiantesDesdeArchivo(String rutaArchivo) {
         List<Estudiante> estudiantes = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(rutaArchivo))) {
@@ -87,7 +87,6 @@ public class ArchivoUtil {
                 }
             }
 
-            // Agregar el último estudiante si el archivo no termina con "----"
             if (estudiante != null) {
                 estudiantes.add(estudiante);
             }

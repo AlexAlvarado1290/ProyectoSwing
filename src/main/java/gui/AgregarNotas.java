@@ -14,6 +14,8 @@ import model.Examen;
 import model.Nota;
 import model.Tarea;
 import utils.ArchivoUtil;
+import static utils.DatabaseConnection.escribirEstudiantes;
+import static utils.DatabaseConnection.obtenerEstudiantesBD;
 
 /**
  *
@@ -37,7 +39,7 @@ public class AgregarNotas extends javax.swing.JFrame {
         
         jComboBoxcarnet.removeAllItems();
         
-        for (Estudiante estudiante : mainWindow.leerEstudiantesDesdeArchivo()) {
+        for (Estudiante estudiante : obtenerEstudiantesBD()) {
         jComboBoxcarnet.addItem(estudiante.getCarnet());
         }
     }
@@ -348,42 +350,41 @@ public class AgregarNotas extends javax.swing.JFrame {
     }//GEN-LAST:event_TFnotas4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String rutaArchivo = "C:\\Users\\Alex Alvarado\\Documents\\NetBeansProjects\\ProyectoSwing\\src\\main\\java\\files\\estudiantes.txt";
+    List<Estudiante> estudiantes = obtenerEstudiantesBD();
 
-        List<Estudiante> estudiantes = ArchivoUtil.cargarEstudiantesDesdeArchivo(rutaArchivo);
+    String carnetSeleccionado = (String) jComboBoxcarnet.getSelectedItem();
+    Estudiante estudiante = null;
 
-        String carnetSeleccionado = (String) jComboBoxcarnet.getSelectedItem();
-        Estudiante estudiante = null;
+    for (Estudiante est : estudiantes) {
+        if (est.getCarnet().equals(carnetSeleccionado)) {
+            estudiante = est;
+            break;
+        }
+    }
 
-        for (Estudiante est : estudiantes) {
-            if (est.getCarnet().equals(carnetSeleccionado)) {
-                estudiante = est;
-                break;
-            }
+    if (estudiante != null) {
+        actualizarNota(estudiante, 0, jComboBox1, TFnotas1);
+        actualizarNota(estudiante, 1, jComboBox2, TFnotas2);
+        actualizarNota(estudiante, 2, jComboBox3, TFnotas3);
+        actualizarNota(estudiante, 3, jComboBox4, TFnotas4);
+
+        try {
+            escribirEstudiantes(estudiantes);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error al guardar los cambios.");
         }
 
-        if (estudiante != null) {
-            actualizarNota(estudiante, 0, jComboBox1, TFnotas1);
-            actualizarNota(estudiante, 1, jComboBox2, TFnotas2);
-            actualizarNota(estudiante, 2, jComboBox3, TFnotas3);
-            actualizarNota(estudiante, 3, jComboBox4, TFnotas4);
-
-            try {
-                ArchivoUtil.escribirEstudiantes(rutaArchivo, estudiantes);
-            } catch (IOException e) {
-                e.printStackTrace();
-                JOptionPane.showMessageDialog(this, "Error al guardar los cambios.");
-            }
-
-            mainWindow.cargarYMostrarEstudiantes();
-            dispose();
-        } else {
-            JOptionPane.showMessageDialog(this, "No se encontró el estudiante con el carnet: " + carnetSeleccionado);
-        }
+        // Recargar y mostrar los estudiantes en la ventana principal
+        mainWindow.cargarYMostrarEstudiantes();
+        dispose();
+    } else {
+        JOptionPane.showMessageDialog(this, "No se encontró el estudiante con el carnet: " + carnetSeleccionado);
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private Estudiante buscarEstudiantePorCarnet(String carnet) {
-        for (Estudiante estudiante : mainWindow.leerEstudiantesDesdeArchivo()) {
+        for (Estudiante estudiante : obtenerEstudiantesBD()) {
             if (estudiante.getCarnet().equals(carnet)) {
                 return estudiante;
             }

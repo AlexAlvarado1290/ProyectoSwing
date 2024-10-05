@@ -10,6 +10,11 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JButton;
@@ -21,6 +26,7 @@ import model.Estudiante;
 import model.Examen;
 import model.Nota;
 import utils.ArchivoUtil;
+import static utils.DatabaseConnection.obtenerEstudiantesBD;
 
 /**
  *
@@ -153,7 +159,7 @@ public class Main_Window extends javax.swing.JFrame {
         panelEstudiantes.add(new JLabel("Promedio"));
         panelEstudiantes.add(new JLabel("Aprobado"));
 
-        estudiantes = leerEstudiantesDesdeArchivo();
+        estudiantes = obtenerEstudiantesBD();
         for (Estudiante estudiante : estudiantes) {
             panelEstudiantes.add(new JLabel(estudiante.getNombre()));
             panelEstudiantes.add(new JLabel(estudiante.getApellido()));
@@ -179,32 +185,6 @@ public class Main_Window extends javax.swing.JFrame {
 
         panelEstudiantes.revalidate();
         panelEstudiantes.repaint();
-    }
-    
-    public List<Estudiante> leerEstudiantesDesdeArchivo() {
-        List<Estudiante> estudiantes = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Alex Alvarado\\Documents\\NetBeansProjects\\ProyectoSwing\\src\\main\\java\\files\\estudiantes.txt"))) {
-            String linea;
-            Estudiante estudiante = null;
-            while ((linea = reader.readLine()) != null) {
-                if (linea.equals("----")) {
-                    estudiantes.add(estudiante);
-                    estudiante = null;
-                } else {
-                    String[] partes = linea.split(",");
-                    if (partes.length == 3) {
-                        if (estudiante == null) {
-                            estudiante = new Estudiante(partes[0], partes[1], partes[2]);
-                        } else {
-                            estudiante.agregarNota(new Examen(Double.parseDouble(partes[1]), partes[2]));
-                        }
-                    }
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return estudiantes;
     }
     
     /**

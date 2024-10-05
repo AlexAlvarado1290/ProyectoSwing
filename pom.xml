@@ -11,4 +11,14 @@
         <maven.compiler.target>22</maven.compiler.target>
         <exec.mainClass>com.mycompany.proyectoswing.ProyectoSwing</exec.mainClass>
     </properties>
+    
+     <dependencies>
+        <!-- Dependencia para MySQL Connector -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.31</version>
+        </dependency>
+    </dependencies>
+    
 </project>

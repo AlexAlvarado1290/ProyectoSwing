@@ -10,6 +10,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
+import static utils.DatabaseConnection.generarCarnet;
+import static utils.DatabaseConnection.guardarEstudiante;
 
 public class AgregarAlumno extends javax.swing.JFrame {
     private final Main_Window mainWindow;
@@ -134,42 +136,6 @@ public class AgregarAlumno extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private String generarCarnet() {
-        String baseCarnet = "202400";
-        int correlativo = 1;
-
-        try {
-            File file = new File("C:\\Users\\Alex Alvarado\\Documents\\NetBeansProjects\\ProyectoSwing\\src\\main\\java\\files\\estudiantes.txt");
-            if (file.exists()) {
-                Scanner scanner = new Scanner(file);
-                while (scanner.hasNextLine()) {
-                    String line = scanner.nextLine();
-                    if (line.startsWith("----")) {
-                        correlativo++;
-                    }
-                }
-                scanner.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return baseCarnet + String.format("%02d", correlativo);
-    }
-
-    private void guardarEstudiante(String nombre, String apellidos, String carnet) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\Alex Alvarado\\Documents\\NetBeansProjects\\ProyectoSwing\\src\\main\\java\\files\\estudiantes.txt", true))) {
-            writer.newLine();
-            writer.write(nombre + "," + apellidos + "," + carnet);
-            writer.newLine();
-            writer.write("----");
-            JOptionPane.showMessageDialog(this, "Estudiante guardado con éxito: " + carnet);
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(this, "Error al guardar el estudiante.");
-        }
-    }
-    
     /**
      * @param args the command line arguments
      */

@@ -8,8 +8,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Estudiante extends Persona implements Serializable{
-    private static final long serialVersionUID = 1L;
+public class Estudiante extends Persona{
     private String carnet;
     private List<Nota> notas;
     

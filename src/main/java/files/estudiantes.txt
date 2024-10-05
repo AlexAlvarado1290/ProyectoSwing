@@ -1,6 +1,36 @@
 Juan,Perez,2024001
-Examen,85.0,Examen Bimestre 1
-Examen,90.0,Examen Bimestre 2
+Examen,0.0,Examen Bimestre 1
+Examen,0.0,Examen Bimestre 2
+Tarea,0.9,Tarea Bimestre 3
+Examen,0.0,Examen Bimestre 4
 ----
 Maria,Lopez,2024002
 Examen,75.0,Examen Bimestre 1
+Examen,80.0,Examen Bimestre 2
+Tarea,100.0,Tarea Bimestre 3
+Examen,60.0,Examen Bimestre 4
+----
+Hugo,Martinez,20240003
+Examen,20.0,Examen Bimestre 1
+Examen,80.0,Examen Bimestre 2
+Examen,70.0,Examen Bimestre 3
+Examen,60.0,Examen Bimestre 4
+----
+Angel,Morales,20240004
+Tarea,100.0,Tarea Bimestre 1
+Tarea,30.0,Tarea Bimestre 2
+Tarea,20.0,Tarea Bimestre 3
+Examen,100.0,Examen Bimestre 4
+----
+juan,maroquin,20240005
+Examen,0.0,Examen Bimestre 1
+Examen,50.0,Examen Bimestre 2
+Examen,80.0,Examen Bimestre 3
+Examen,100.0,Examen Bimestre 4
+----
+Mariela,Ramirez,20240006
+Examen,12.0,Examen Bimestre 1
+Examen,90.0,Examen Bimestre 2
+Examen,100.0,Examen Bimestre 3
+Examen,90.0,Examen Bimestre 4
+----
